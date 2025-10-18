@@ -1,0 +1,111 @@
+#choice-buttons {
+    margin-top: 1.5em;
+}
+
+#toggleText a:hover {
+  color: #a259c6;
+  text-decoration: none;
+}
+
+
+#user-form {
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #c2e9fb55;
+    padding: 2em 2.5em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+}
+
+#user-form h2 {
+    color: #a259c6;
+    margin-bottom: 1em;
+}
+
+#user-form label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+    color: #6a82fb;
+    font-size: 1rem;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    align-self: flex-start;
+}
+
+#user-form input[type="text"], #user-form input[type="password"] {
+    width: 100%;
+    padding: 0.6em 1em;
+    border: 1px solid #e0c3fc;
+    border-radius: 12px;
+    background: #f8e1f4cc;
+    margin-bottom: 0.7em;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#user-form input[type="text"]:focus, #user-form input[type="password"]:focus {
+    border: 1.5px solid #a259c6;
+    background: #fff;
+}
+
+@media (max-width: 500px) {
+    #user-form {
+        min-width: unset;
+        width: 90vw;
+        padding: 1em;
+    }
+}
+
+#login p {
+  color: #5d73de;
+}
+
+body.dark-mode #login p {
+  color: #fffffff2;
+}
+
+#choice-buttons button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #fcb7ff, #72a8ff);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+#choice-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(0deg);
+  transition: 0.6s;
+}
+
+#choice-buttons button:hover::before {
+  left: 100%;
+}
+
+#choice-buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+body.dark-mode #choice-buttons button {
+  background: linear-gradient(45deg, #ff788f, #9c9dff);
+  color: #fff;
+}

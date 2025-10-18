@@ -1,0 +1,60 @@
+<section id="bmi">
+    <div class="container">
+        <h2>BMI Tracker</h2>
+        <form id="bmi-form">
+            <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" name="height" required min="100" max="250">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" required min="30" max="200" step="0.1">
+            </div>
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <div id="bmi-result"></div>
+        <div id="bmi-records-section">
+            <h3>BMI Records</h3>
+            <div id="bmi-search-section">
+                <div class="search-controls">
+                    <div class="form-group">
+                        <label for="searchType">Search By</label>
+                        <select id="searchType">
+                            <option value="date">Date</option>
+                            <option value="status">Status</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="dateSearchGroup">
+                        <label for="searchDate">Select Date</label>
+                        <input type="date" id="searchDate">
+                    </div>
+                    <div class="form-group" id="statusSearchGroup" style="display:none;">
+                        <label for="searchStatus">Select Status</label>
+                        <select id="searchStatus">
+                            <option value="">All</option>
+                            <option value="Underweight">Underweight</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Overweight">Overweight</option>
+                            <option value="Obese">Obese</option>
+                        </select>
+                    </div>
+                    <button id="searchBtn" type="button">Search</button>
+                    <button id="clearSearchBtn" type="button">Clear</button>
+                </div>
+            </div>
+            <div id="bmi-records-list"></div>
+        </div>
+        <canvas id="bmiChart" style="margin: 20px 0;"></canvas>
+        <button id="bmiBackBtn">Back</button>
+    </div>
+    <div id="editModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:20px; border-radius:10px;">
+  <form id="editBmiForm">
+    <label for="editHeight">Height (cm)</label>
+    <input type="number" id="editHeight" required min="100" max="250">
+    <label for="editWeight">Weight (kg)</label>
+    <input type="number" id="editWeight" required min="30" max="200" step="0.1">
+    <button type="submit">Save</button>
+    <button type="button" onclick="document.getElementById('editModal').style.display='none';">Cancel</button>
+  </form>
+</div>
+</section>

@@ -1,0 +1,392 @@
+.bmi-result {
+    text-align: center;
+    backdrop-filter: blur(15px);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #a259c6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 32px rgba(161, 196, 253, 0.4);
+    animation: slideIn 0.5s ease-out;
+}
+
+.bmi-result h3 {
+    color: #a259c6;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.bmi-status {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: popUp 0.6s ease-out;
+}
+
+.bmi-status.underweight {
+    color: #2563eb;
+    border-color: #60a5fa;
+    background: linear-gradient(135deg, #deecff 0%, #96bae6 100%);
+}
+
+.bmi-status.normal {
+    color: #059669;
+    border-color: #34d399;
+    background: linear-gradient(135deg, #ddffed 0%, #8cd0b0 100%);
+}
+
+.bmi-status.overweight {
+    color: #d97706;
+    border-color: #fbbf24;
+    background: linear-gradient(135deg, #fff8dd 0%, #f6e08b 100%);
+}
+
+.bmi-status.obese {
+    color: #dc2626;
+    border-color: #f87171;
+    background: linear-gradient(135deg, #ffe7e7 0%, #e4afaf 100%);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: block;
+    color: #6a82fb;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #a1c4fd;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #fcb7ff;
+    box-shadow: 0 0 0 3px rgba(252, 183, 255, 0.15);
+}
+
+#editModal {
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    border: 2px solid #a1c4fd;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+}
+
+#editBmiForm label {
+    display: block;
+    color: #6a82fb;
+    font-weight: 600;
+    margin: 1rem 0 0.3rem;
+}
+
+#editBmiForm input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #a1c4fd;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s;
+}
+
+#editBmiForm input:focus {
+    outline: none;
+    border-color: #fcb7ff;
+    box-shadow: 0 0 0 3px rgba(252, 183, 255, 0.15);
+}
+
+.search-controls {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.search-controls .form-group {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.search-controls select,
+.search-controls input[type="date"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #a1c4fd;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.search-controls select:focus,
+.search-controls input[type="date"]:focus {
+    outline: none;
+    border-color: #fcb7ff;
+    box-shadow: 0 0 0 3px rgba(252, 183, 255, 0.15);
+}
+
+.search-controls button {
+    flex: 0 0 auto;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    max-width: 100px;
+}
+
+#bmi-records-section {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+    border: 2px solid #a259c6;
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(161, 196, 253, 0.2);
+    position: relative;
+}
+
+#bmi-records-section > h3 {
+    color: #6a82fb;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#bmi-records-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, rgba(248, 249, 255, 0.9));
+    pointer-events: none;
+    border-radius: 0 0 15px 15px;
+}
+
+/* ===== BMI RECORDS LIST ===== */
+#bmi-records-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+    scroll-behavior: smooth;
+}
+
+#bmi-records-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#bmi-records-list li {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e7ff;
+    border-radius: 10px;
+    padding: 0.8rem;
+    margin-bottom: 0.6rem;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+#bmi-records-list button {
+    margin: 0;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+#bmi-records-list button:first-of-type {
+    background: linear-gradient(135deg, #cad2ff 0%, #8eb7db 100%);
+    color: white;
+}
+
+#bmi-records-list button:last-of-type {
+    background: linear-gradient(135deg, #ff90af 0%, #ff63ae 100%);
+    color: white;
+}
+
+#bmi-records-list button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styling */
+#bmi-records-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#bmi-records-list::-webkit-scrollbar-track {
+    background: rgba(161, 196, 253, 0.2);
+    border-radius: 10px;
+}
+
+#bmi-records-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #95beff 0%, #cbc2fb 100%);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#bmi-records-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a75ff 0%, #98bcf6 100%);
+}
+
+.record-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.record-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+#bmi h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #2020fc, #ffe0ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-mode .bmi-result {
+    background: linear-gradient(135deg, #23272f 0%, #1a202c 100%);
+    color: #f3f3f3;
+    border-color: #6366f1;
+}
+
+body.dark-mode .bmi-result h3 {
+    color: #a259c6;
+}
+
+body.dark-mode .bmi-status.underweight {
+    border-color: #2563eb;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+body.dark-mode .bmi-status.normal {
+    border-color: #059669;
+    background: linear-gradient(135deg, #1e293b 0%, #14532d 100%);
+}
+
+body.dark-mode .bmi-status.overweight {
+    border-color: #d97706;
+    background: linear-gradient(135deg, #1e293b 0%, #78350f 100%);
+}
+
+body.dark-mode .bmi-status.obese {
+    border-color: #dc2626;
+    background: linear-gradient(135deg, #1e293b 0%, #7f1d1d 100%);
+}
+
+body.dark-mode .search-controls select,
+body.dark-mode .search-controls input[type="date"] {
+    background: #2d3748;
+    color: #f3f3f3;
+    border-color: #4a5568;
+}
+
+body.dark-mode #bmi-records-section {
+    background: linear-gradient(135deg, #23272f 0%, #1a202c 100%);
+    border-color: #6366f1;
+}
+
+body.dark-mode #bmi-records-section > h3 {
+    color: #a1c4fd;
+}
+
+body.dark-mode #bmi-records-section::after {
+    background: linear-gradient(to bottom, transparent, rgba(35, 39, 47, 0.9));
+}
+
+body.dark-mode #bmi-records-list li {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #f3f3f3;
+}
+
+body.dark-mode #bmi-records-list::-webkit-scrollbar-track {
+    background: #1a202c;
+}
+
+body.darkmode #bmi h2 {
+    background: linear-gradient(45deg, #edabff 0%, #7c69b3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 768px) {
+    #bmi h2 {
+        font-size: 2rem;
+    }
+    #bmi-records-list {
+        max-height: 300px;
+    }
+    #bmi-records-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .record-info {
+        width: 100%;
+        text-align: center;
+    }
+    .record-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    #bmi-records-list button {
+        flex: 1;
+        max-width: 120px;
+    }
+}

@@ -1,0 +1,66 @@
+#menu {
+  text-align: center;
+  padding: 2rem;
+  padding-top: 80px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(194, 233, 251, 0.27);
+  width: 280px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card h3 {
+  color: #6a82fb;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fcb7ff 0%, #a1c4fd 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: linear-gradient(90deg, #a1c4fd 0%, #fcb7ff 100%);
+}
+
+.cta {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #34d399 0%, #6a82fb 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: linear-gradient(90deg, #6a82fb 0%, #34d399 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card h3 {
+    color: #6a82fb !important;
+  }
+}
