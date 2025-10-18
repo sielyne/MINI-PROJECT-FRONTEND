@@ -25,7 +25,7 @@ FeatureHandler.registerFeature('mood', {
             return;
         }
         
-        fetch(`/mood-history?username=${FeatureHandler.getCurrentUser()}`)
+        fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${FeatureHandler.getCurrentUser()}`)
             .then(res => res.json())
             .then(data => {
                 this.allMoodData = Array.isArray(data) ? data : [];
@@ -90,7 +90,7 @@ FeatureHandler.registerFeature('mood', {
         }
         
         // Simpan mood dan journal (bisa kosong)
-        fetch('/mood', {
+        fetch('https://mini-project-backend-production-55d9.up.railway.app/mood', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -137,7 +137,7 @@ FeatureHandler.registerFeature('mood', {
         let newNote = prompt("New note (leave empty to skip):", moodData.note || '');
         if (newNote === null) return;
         
-        fetch('/mood', {
+        fetch('https://mini-project-backend-production-55d9.up.railway.app/mood', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -172,7 +172,7 @@ FeatureHandler.registerFeature('mood', {
         }
         
         if (confirm('Delete this mood?')) {
-            fetch('/mood', {
+            fetch('https://mini-project-backend-production-55d9.up.railway.app/mood', {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -205,7 +205,7 @@ FeatureHandler.registerFeature('mood', {
             return;
         }
         
-        fetch(`/mood-history?username=${FeatureHandler.getCurrentUser()}`)
+        fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${FeatureHandler.getCurrentUser()}`)
             .then(res => {
                 if (!res.ok) throw new Error('Error loading mood history');
                 return res.json();

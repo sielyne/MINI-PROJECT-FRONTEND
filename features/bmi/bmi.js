@@ -164,12 +164,19 @@ FeatureHandler.registerFeature('bmi', {
       return;
     }
 
-    const data = new URLSearchParams();
-    data.append('username', FeatureHandler.getCurrentUser());
-    data.append('height', height);
-    data.append('weight', weight);
+    const payload = {
+  username: FeatureHandler.getCurrentUser(),
+  height,
+  weight
+};
 
-    fetch('/bmi', { method: 'POST', body: data })
+fetch('https://mini-project-backend-production-55d9.up.railway.app/bmi', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(payload)
+})
+
+
       .then((r) => r.json())
       .then(() => this.loadHistory())
       .catch((err) => {
@@ -218,7 +225,7 @@ FeatureHandler.registerFeature('bmi', {
   loadHistory() {
     if (!FeatureHandler.getCurrentUser()) return;
 
-    fetch(`/bmi-history?username=${FeatureHandler.getCurrentUser()}`)
+    fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${FeatureHandler.getCurrentUser()}`)
       .then((r) => r.json())
       .then((data) => {
         if (!Array.isArray(data)) {
@@ -267,7 +274,7 @@ FeatureHandler.registerFeature('bmi', {
   deleteRecord(id) {
     if (!confirm('Are you sure you want to delete this record?')) return;
     
-    fetch('/bmi', {
+    fetch('https://mini-project-backend-production-55d9.up.railway.app/bmi', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -312,7 +319,7 @@ FeatureHandler.registerFeature('bmi', {
         return;
       }
 
-      fetch('/bmi', {
+      fetch('https://mini-project-backend-production-55d9.up.railway.app/bmi', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

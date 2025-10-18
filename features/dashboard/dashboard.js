@@ -39,7 +39,7 @@ FeatureHandler.registerFeature('dashboard', {
     
     if (!bmiValue || !bmiStatus) return;
     
-    fetch(`/bmi-history?username=${username}`)
+    fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${username}`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
@@ -60,7 +60,7 @@ FeatureHandler.registerFeature('dashboard', {
     
     if (!moodIcon || !moodNote) return;
     
-    fetch(`/mood-history?username=${username}`)
+    fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${username}`)
       .then(res => res.json())
       .then(data => {
         const todayStr = new Date().toISOString().split('T')[0];
@@ -85,7 +85,7 @@ FeatureHandler.registerFeature('dashboard', {
     
     if (!quizResult) return;
     
-    fetch(`/quiz-history?username=${username}`)
+    fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${username}`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {

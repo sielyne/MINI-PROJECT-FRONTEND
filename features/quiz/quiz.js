@@ -118,7 +118,7 @@ FeatureHandler.registerFeature('quiz', {
 
             const user = FeatureHandler.getCurrentUser();
             if (user) {
-                fetch(`/quiz-history?username=${encodeURIComponent(user)}`)
+                fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${encodeURIComponent(user)}`)
                     .then(res => res.json())
                     .then(data => {
                         if (Array.isArray(data) && data.length > 0) {
@@ -387,7 +387,7 @@ document.getElementById('quizProgressBar').style.width = `${progress}%`;
             
 
             if (FeatureHandler.getCurrentUser()) {
-                fetch('/quiz', {
+                fetch('https://mini-project-backend-production-55d9.up.railway.app/quiz', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({

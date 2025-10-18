@@ -16,11 +16,10 @@ if (searchInput && searchResults) {
       return;
     }
 
-    // Debounce biar gak fetch terlalu sering
     searchTimeout = setTimeout(async () => {
       try {
         const username = FeatureHandler.getCurrentUser();
-        const res = await fetch(`/search-history?username=${username}&q=${encodeURIComponent(q)}`);
+        const res = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/search-history?username=${username}&q=${encodeURIComponent(q)}`);
         const data = await res.json();
 
         // Gabungkan hasil dari semua kategori
@@ -131,7 +130,7 @@ if (searchInput && searchResults) {
         
         try {
           // First verify current password
-          const verifyRes = await fetch('/user-verify-password', {
+          const verifyRes = await fetch('https://mini-project-backend-production-55d9.up.railway.app/user-verify-password', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -149,7 +148,7 @@ if (searchInput && searchResults) {
           }
           
           // If verification passed, proceed with update
-          const res = await fetch('/user-update', {
+          const res = await fetch('https://mini-project-backend-production-55d9.up.railway.app/user-update', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -208,7 +207,7 @@ if (searchInput && searchResults) {
               const username = FeatureHandler.getCurrentUser();
               
               // Verify password before deletion
-              const verifyRes = await fetch('/user-verify-password', {
+              const verifyRes = await fetch('https://mini-project-backend-production-55d9.up.railway.app/user-verify-password', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -225,7 +224,7 @@ if (searchInput && searchResults) {
               }
               
               // If verified, proceed with deletion
-              const res = await fetch('/user-delete', {
+              const res = await fetch('https://mini-project-backend-production-55d9.up.railway.app/user-delete', {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -254,7 +253,7 @@ if (searchInput && searchResults) {
   },
 
  loadBMI(username) {
-  fetch(`/bmi-history?username=${username}`)
+  fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${username}`)
     .then(res => res.json())
     .then(data => {
       const list = document.getElementById('profile-bmi-list');
@@ -274,7 +273,7 @@ if (searchInput && searchResults) {
 },
 
 loadMood(username) {
-  fetch(`/mood-history?username=${username}`)
+  fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${username}`)
     .then(res => res.json())
     .then(data => {
       const list = document.getElementById('profile-mood-list');
@@ -293,7 +292,7 @@ loadMood(username) {
 },
 
 loadQuiz(username) {
-  fetch(`/quiz-history?username=${username}`)
+  fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${username}`)
     .then(res => res.json())
     .then(data => {
       const list = document.getElementById('profile-quiz-list');
@@ -318,11 +317,11 @@ loadQuiz(username) {
       const doc = new jsPDF();
       
       // Fetch all data
-      const bmiRes = await fetch(`/bmi-history?username=${username}`);
+      const bmiRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${username}`);
       const bmiData = await bmiRes.json();
-      const moodRes = await fetch(`/mood-history?username=${username}`);
+      const moodRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${username}`);
       const moodData = await moodRes.json();
-      const quizRes = await fetch(`/quiz-history?username=${username}`);
+      const quizRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${username}`);
       const quizData = await quizRes.json();
       
       let yPos = 20;
@@ -479,7 +478,7 @@ loadQuiz(username) {
   async loadReportData(username) {
     try {
       // Load BMI History
-      const bmiRes = await fetch(`/bmi-history?username=${username}`);
+      const bmiRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${username}`);
       const bmiData = await bmiRes.json();
       const bmiList = document.getElementById('report-bmi-list');
       bmiList.innerHTML = '';
@@ -494,7 +493,7 @@ loadQuiz(username) {
       }
       
       // Load Mood History
-      const moodRes = await fetch(`/mood-history?username=${username}`);
+      const moodRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${username}`);
       const moodData = await moodRes.json();
       const moodList = document.getElementById('report-mood-list');
       moodList.innerHTML = '';
@@ -509,7 +508,7 @@ loadQuiz(username) {
       }
       
       // Load Quiz History
-      const quizRes = await fetch(`/quiz-history?username=${username}`);
+      const quizRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${username}`);
       const quizData = await quizRes.json();
       const quizList = document.getElementById('report-quiz-list');
       quizList.innerHTML = '';
@@ -538,11 +537,11 @@ loadQuiz(username) {
           const doc = new jsPDF();
           
           // Fetch all data
-          const bmiRes = await fetch(`/bmi-history?username=${username}`);
+          const bmiRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/bmi-history?username=${username}`);
           const bmiData = await bmiRes.json();
-          const moodRes = await fetch(`/mood-history?username=${username}`);
+          const moodRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/mood-history?username=${username}`);
           const moodData = await moodRes.json();
-          const quizRes = await fetch(`/quiz-history?username=${username}`);
+          const quizRes = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/quiz-history?username=${username}`);
           const quizData = await quizRes.json();
           
           let yPos = 20;
@@ -709,7 +708,7 @@ if (searchInput && searchResults) {
     searchTimeout = setTimeout(async () => {
       try {
         const username = FeatureHandler.getCurrentUser();
-        const res = await fetch(`/search-history?username=${username}&q=${encodeURIComponent(q)}`);
+        const res = await fetch(`https://mini-project-backend-production-55d9.up.railway.app/search-history?username=${username}&q=${encodeURIComponent(q)}`);
         const data = await res.json();
 
         // Gabungkan hasil dari semua kategori

@@ -1,9 +1,12 @@
+const BASE_URL = 'https://mini-project-backend-production-55d9.up.railway.app';
+
 FeatureHandler.registerFeature('login', {
     init() {
         const regBtn = document.getElementById('registerBtn');
         const logBtn = document.getElementById('loginBtn');
         const backBtn = document.getElementById('backBtn');
         const userForm = document.getElementById('user-form');
+        
 
         if (regBtn) regBtn.onclick = () => this.showForm('register');
         if (logBtn) logBtn.onclick = () => this.showForm('login');
@@ -31,7 +34,7 @@ FeatureHandler.registerFeature('login', {
   const title = document.getElementById('form-title');
   const toggleText = document.getElementById('toggleText');
 
-  form.action = type === 'register' ? '/register' : '/login';
+  form.action = type === 'register' ? `${BASE_URL}/register` : `${BASE_URL}/login`;
   title.textContent = type === 'register' ? 'Register' : 'Login';
   form.style.display = 'block';
 
@@ -63,64 +66,59 @@ FeatureHandler.registerFeature('login', {
     },
 
     handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
+  e.preventDefault();
+  const form = e.target;
 
-    console.log('Sending to:', form.action, 'with data:', new URLSearchParams(data).toString());
+  const payload = {
+    username: form.username.value.trim(),
+    password: form.password.value.trim()
+  };
 
-    fetch(form.action, { method: 'POST', body: new URLSearchParams(data) })
-        .then(res => res.text())
-        .then(result => {
-            console.log('Server response:', result); // Debug server output
+  console.log('Sending to:', form.action, 'with JSON:', payload);
 
-            if (form.action.endsWith('/login')) {
-                // LOGIN HANDLER
-                if (result.includes('Login berhasil')) {
-                    const username = document.getElementById('username').value.trim();
-                    if (username) {
-                        FeatureHandler.setCurrentUser(username);
-                        FeatureHandler.updateHeader();
-                        FeatureHandler.showPage('menu');
-                    } else {
-                        alert('Username cannot be empty.');
-                    }
-                } else {
-                    alert('Login failed: Incorrect username or password.');
-                    form.reset();
-                }
-            } 
-            
-            else if (form.action.endsWith('/register')) {
-                // REGISTER HANDLER
-                FeatureHandler.setCurrentUser(null);
-                FeatureHandler.updateHeader();
+  fetch(form.action, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+    .then(res => res.text())
+    .then(result => {
+      console.log('Server response:', result);
 
-                if (result.includes('Registrasi berhasil')) {
-                    alert('✅ Registration successful! Please log in to continue.');
-                    this.showForm('login');
-                    document.getElementById('password').value = '';
-                } 
-                else if (result.includes('Registrasi gagal')) {
-                    alert('❌ Registration failed: Username already exists.');
-                    form.reset();
-                } 
-                else if (result.includes('Username and password are required')) {
-                    alert('⚠️ Registration failed: Username and password are required.');
-                    form.reset();
-                } 
-                else {
-                    alert('Registration failed: ' + result);
-                    form.reset();
-                }
-            }
-        })
-        .catch(err => {
-            console.error('Network error:', err);
-            alert('⚠️ Network error. Please try again later.');
-            form.reset();
-        });
+      if (form.action.endsWith('/login')) {
+        if (result.includes('Login berhasil')) {
+          FeatureHandler.setCurrentUser(payload.username);
+          FeatureHandler.updateHeader();
+          FeatureHandler.showPage('menu');
+        } else {
+          alert('Login failed: Incorrect username or password.');
+          form.reset();
+        }
+      } else if (form.action.endsWith('/register')) {
+        FeatureHandler.setCurrentUser(null);
+        FeatureHandler.updateHeader();
+
+        if (result.includes('Registrasi berhasil')) {
+          alert('✅ Registration successful! Please log in to continue.');
+          this.showForm('login');
+          document.getElementById('password').value = '';
+        } else if (result.includes('Registrasi gagal')) {
+          alert('❌ Registration failed: Username already exists.');
+          form.reset();
+        } else if (result.includes('Username and password are required')) {
+          alert('⚠️ Registration failed: Username and password are required.');
+          form.reset();
+        } else {
+          alert('Registration failed: ' + result);
+          form.reset();
+        }
+      }
+    })
+    .catch(err => {
+      console.error('Network error:', err);
+      alert('⚠️ Network error. Please try again later.');
+      form.reset();
+    });
 }
-
 
 });
