@@ -698,38 +698,41 @@
 }
 
 @media (max-width: 768px) {
-  .profile-container, 
-  .history-container {
-    padding: 1rem;
-    font-size: 0.95rem;
+  .profile-history, 
+  .search-history {
+    font-size: 14px;
+    line-height: 1.4;
   }
-  .history-item {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+
+  .profile-history .history-item, 
+  .search-history .result-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .profile-history h3, 
+  .search-history h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 }
 
-@media (max-width: 500px) {
-  .profile-container h2,
-  .history-container h2 {
-    font-size: 1.2rem;
-    text-align: center;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .profile-history, 
+  .search-history {
+    font-size: 15px;
   }
-  .profile-container, 
-  .history-container {
-    width: 95%;
-    margin: auto;
-    border-radius: 12px;
+
+  .profile-history .history-item, 
+  .search-history .result-item {
+    font-size: 15px;
+    padding: 12px;
   }
-  .history-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  .history-item button {
-    width: 100%;
-    font-size: 0.95rem;
-    padding: 0.6rem;
+
+  .profile-history h3, 
+  .search-history h3 {
+    font-size: 18px;
   }
 }
