@@ -381,3 +381,67 @@ body.dark-mode #quizResultContent h3 {
   color: #a1c4fd !important;
 }
 
+@media (max-width: 768px) {
+  #quizQuestion {
+    font-size: 1.15rem !important;
+  }
+
+  #quizOptions button {
+    width: 98% !important;
+    font-size: 0.95rem !important;
+  }
+
+  .quiz-result-card {
+    margin: 1rem 0.5rem !important;
+    padding: 1.5rem !important;
+  }
+
+  .result-header {
+    flex-direction: column !important;
+  }
+
+  .result-image {
+    width: 150px !important;
+  }
+
+  .quiz-result-buttons {
+    flex-direction: column !important;
+  }
+
+  .quiz-result-buttons button {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  #quizReviewContent {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #quizQuestion {
+    font-size: 1.05rem !important;
+  }
+
+  #quizOptions button {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0.9rem !important;
+  }
+
+  .result-image {
+    width: 130px !important;
+  }
+
+  .result-info h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .result-info p {
+    font-size: 0.85rem !important;
+  }
+
+  .quiz-nav button {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}

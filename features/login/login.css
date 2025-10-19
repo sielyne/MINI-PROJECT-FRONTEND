@@ -222,3 +222,53 @@ body.dark-mode #login p {
     padding: 8px 16px;
   }
 }
+
+@media (max-width: 768px) {
+  #user-form {
+    width: 95% !important;
+    max-width: 400px !important;
+    padding: 1.5em 1.2em !important;
+  }
+
+  #toggleText {
+    font-size: 0.85rem !important;
+  }
+
+  #choice-buttons button {
+    min-width: 120px !important;
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #user-form {
+    width: 98% !important;
+    padding: 1.2em 1em !important;
+  }
+
+  #user-form h2 {
+    font-size: 1.3rem !important;
+  }
+
+  #user-form input[type="text"],
+  #user-form input[type="password"] {
+    font-size: 0.9rem !important;
+    padding: 0.5em 0.8em !important;
+  }
+
+  #toggleText {
+    font-size: 0.8rem !important;
+  }
+
+  #choice-buttons {
+    flex-direction: column !important;
+  }
+
+  #choice-buttons button {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    padding: 10px 15px !important;
+  }
+}
