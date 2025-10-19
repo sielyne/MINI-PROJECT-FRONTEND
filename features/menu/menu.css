@@ -59,6 +59,29 @@
   background: linear-gradient(90deg, #6a82fb 0%, #34d399 100%);
 }
 
+@media (max-width: 768px) {
+  #menu {
+    padding: 1.5rem 1rem;
+    padding-top: 80px;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .card h3 {
     color: #6a82fb !important;
