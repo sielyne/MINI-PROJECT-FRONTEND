@@ -1,44 +1,113 @@
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+/* ===== RESPONSIVE UNTUK SEMUA FITUR ===== */
 
+/* Tablet & Mobile (768px ke bawah) */
+@media (max-width: 768px) {
+  /* Container Global */
   .container {
     padding: 1rem;
+    max-width: 100%;
   }
 
+  /* Header */
   #main-header {
     padding: 0.6rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .profile-area {
+    gap: 0.3rem;
   }
 
   #header-username {
     font-size: 0.85rem;
   }
 
+  .profile-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  #logoutBtn, #hamburgerBtn, #themeToggleBtn {
+    padding: 0.4em 1em;
+    font-size: 1rem;
+  }
+
   #header-nav {
     right: 1rem;
     min-width: 140px;
+    padding: 0.8rem;
   }
 
-  /* Login */
+  #header-nav button {
+    font-size: 0.9rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.5em 1.5em;
+  }
+
+  /* LOGIN PAGE */
   #user-form {
-    padding: 1.5em 1.2em;
-    margin: 1em 0.5em;
     width: 95%;
     max-width: 400px;
+    padding: 1.5em 1.2em;
+    margin: 1em auto;
+  }
+
+  #user-form h2 {
+    font-size: 1.4rem;
+  }
+
+  #user-form label {
+    font-size: 0.95rem;
+  }
+
+  #user-form input[type="text"],
+  #user-form input[type="password"] {
+    font-size: 0.95rem;
+    padding: 0.5em 0.9em;
   }
 
   #toggleText {
-    font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+    font-size: 0.85rem;
+  }
+
+  #choice-buttons {
+    gap: 10px;
+    flex-direction: row;
   }
 
   #choice-buttons button {
-    min-width: 110px;
+    flex: 1 1 auto;
+    min-width: 120px;
+    max-width: 45%;
     padding: 10px 20px;
     font-size: 15px;
   }
 
-  /* Menu Cards */
+  /* MENU PAGE */
+  #menu {
+    padding: 1.5rem 1rem;
+    padding-top: 80px;
+  }
+
   .feature-cards {
     flex-direction: column;
     align-items: center;
@@ -48,6 +117,20 @@
   .card {
     width: 90%;
     max-width: 400px;
+    padding: 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
   }
 
   .cta {
@@ -55,7 +138,7 @@
     padding: 0.7rem 1.5rem;
   }
 
-  /* Dashboard */
+  /* DASHBOARD */
   .dashboard-cards {
     flex-direction: column;
     align-items: center;
@@ -67,10 +150,19 @@
     max-width: 400px;
   }
 
-  /* Profile */
+  /* PROFILE PAGE */
   .profile-section {
     max-width: 95%;
     padding: 0 1rem;
+  }
+
+  .profile-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .profile-section li {
+    padding: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .profile-btn-row {
@@ -80,9 +172,11 @@
 
   .profile-btn-row button {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    padding: 0.7rem 1.3rem;
   }
 
+  /* Search History */
   .search-history-container {
     max-width: 95%;
     padding: 0 0.5rem;
@@ -93,21 +187,59 @@
     font-size: 0.95rem;
   }
 
+  #search-results {
+    padding: 0.8rem;
+  }
+
+  #search-results h3 {
+    font-size: 0.95rem;
+  }
+
   #search-results li {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
   }
 
-  /* Quiz */
+  .search-history-container h3 {
+    font-size: 0.95rem;
+  }
+
+  .search-history-container li {
+    font-size: 0.9rem;
+    padding: 5px 0;
+  }
+
+  /* QUIZ PAGE */
+  .quiz-header {
+    padding: 0.8rem 0;
+  }
+
+  .quiz-header h2 {
+    font-size: 1.3rem;
+  }
+
+  #quizProgressBar {
+    max-width: 280px;
+  }
+
   #quizQuestion {
-    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    font-size: 1.15rem;
     padding: 0 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  #quizOptions {
+    gap: 8px;
   }
 
   #quizOptions button {
     width: 98%;
     padding: 0.8rem 1rem;
     font-size: 0.95rem;
+  }
+
+  .quiz-card {
+    padding: 1rem;
   }
 
   .quiz-result-card {
@@ -118,11 +250,21 @@
   .result-header {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .result-image {
     width: 150px;
     margin: 0 auto;
+  }
+
+  .result-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .result-info p,
+  .result-info ul {
+    font-size: 0.9rem;
   }
 
   .quiz-result-buttons {
@@ -133,6 +275,7 @@
   .quiz-result-buttons button {
     width: 100%;
     max-width: 300px;
+    font-size: 0.95rem;
   }
 
   #quizReviewContent {
@@ -140,12 +283,20 @@
     gap: 1rem;
   }
 
-  .quiz-nav button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+  .quiz-nav {
+    margin-top: 12px;
   }
 
-  /* Report */
+  .quiz-nav button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .article-slideshow {
+    max-width: 260px;
+  }
+
+  /* REPORT PAGE */
   .report-container {
     padding: 1.5rem;
     margin: 0 0.5rem;
@@ -155,14 +306,27 @@
     font-size: 1.5rem;
   }
 
+  .report-username {
+    font-size: 1rem;
+  }
+
+  .report-date {
+    font-size: 0.9rem;
+  }
+
   .report-card-header {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    padding: 1rem;
   }
 
   .report-card-header h3 {
     font-size: 1.1rem;
+  }
+
+  .report-count {
+    font-size: 0.85rem;
   }
 
   .report-card-body {
@@ -183,32 +347,48 @@
   .btn-back {
     width: 100%;
     max-width: 100%;
+    padding: 0.9rem 1.5rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
+  .footer-logo {
+    font-size: 1.4rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+  }
+
+  .footer-social {
+    gap: 1rem;
+  }
+
+  .footer-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-copyright {
+    font-size: 0.9rem;
   }
 }
 
+/* Mobile Small (480px ke bawah) */
 @media (max-width: 480px) {
-  body {
-    font-size: 13px;
-  }
-
+  /* Container */
   .container {
     padding: 0.5rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 0.5em 1.5em;
-    margin: 0.2em 0.3em;
-  }
-
+  /* Header */
   #main-header {
     padding: 0.5rem 0.8rem;
   }
@@ -223,20 +403,43 @@
   }
 
   #logoutBtn, #hamburgerBtn, #themeToggleBtn {
-    font-size: 0.95rem;
-    padding: 0.4em 1em;
+    font-size: 0.9rem;
+    padding: 0.35em 0.9em;
   }
 
   #header-nav {
     right: 0.5rem;
     min-width: 130px;
-    padding: 0.8rem;
+    padding: 0.7rem;
   }
 
-  /* Login */
+  #header-nav button {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5em 1.2em;
+  }
+
+  /* LOGIN */
   #user-form {
-    padding: 1.2em 1em;
     width: 98%;
+    padding: 1.2em 1em;
   }
 
   #user-form h2 {
@@ -247,7 +450,7 @@
     font-size: 0.9rem;
   }
 
-  #user-form input[type="text"], 
+  #user-form input[type="text"],
   #user-form input[type="password"] {
     padding: 0.5em 0.8em;
     font-size: 0.9rem;
@@ -258,6 +461,7 @@
   }
 
   #choice-buttons {
+    flex-direction: column;
     gap: 8px;
   }
 
@@ -267,10 +471,14 @@
     min-width: unset;
     padding: 10px 15px;
     font-size: 14px;
-    margin: 0;
   }
 
-  /* Menu */
+  /* MENU */
+  #menu {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
   .feature-cards {
     gap: 1rem;
   }
@@ -288,12 +496,17 @@
     font-size: 0.9rem;
   }
 
+  .card button {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.9rem;
+  }
+
   .cta {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
   }
 
-  /* Profile */
+  /* PROFILE */
   .profile-section {
     margin: 1rem 0;
   }
@@ -326,7 +539,7 @@
   }
 
   #search-results h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   #search-results li {
@@ -335,7 +548,7 @@
   }
 
   .search-history-container h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .search-history-container li {
@@ -343,9 +556,9 @@
     padding: 3px 0;
   }
 
-  /* Quiz */
+  /* QUIZ */
   .quiz-header {
-    padding: 0.8rem 0;
+    padding: 0.7rem 0;
   }
 
   .quiz-header h2 {
@@ -357,12 +570,8 @@
   }
 
   #quizQuestion {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-
-  #quizOptions {
-    gap: 8px;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
   }
 
   #quizOptions button {
@@ -371,7 +580,7 @@
   }
 
   .quiz-card {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   .quiz-result-card {
@@ -386,7 +595,8 @@
     font-size: 1.2rem;
   }
 
-  .result-info p {
+  .result-info p,
+  .result-info ul {
     font-size: 0.85rem;
   }
 
@@ -395,17 +605,13 @@
     font-size: 0.9rem;
   }
 
-  .quiz-nav {
-    margin-top: 10px;
-  }
-
   .quiz-nav button {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
 
   #quizReviewContent .quiz-card {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   #quizReviewContent p {
@@ -413,10 +619,10 @@
   }
 
   .article-slideshow {
-    max-width: 250px;
+    max-width: 240px;
   }
 
-  /* Report */
+  /* REPORT */
   #report {
     padding: 1rem;
   }
@@ -434,7 +640,7 @@
   }
 
   .report-username {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .report-date {
@@ -442,7 +648,7 @@
   }
 
   .report-card-header {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   .report-card-header h3 {
@@ -455,12 +661,12 @@
   }
 
   .report-card-body {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   .report-card-body li {
     font-size: 0.85rem;
-    padding: 0.8rem;
+    padding: 0.7rem 0.8rem;
   }
 
   .btn-download,
@@ -471,7 +677,7 @@
 
   /* Footer */
   .site-footer {
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
 
   .footer-logo {
@@ -487,6 +693,7 @@
   }
 }
 
+/* Mobile Extra Small (350px ke bawah) */
 @media (max-width: 350px) {
   #choice-buttons button {
     font-size: 13px;
@@ -510,51 +717,8 @@
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
   }
-}
 
-/* ===== DARK MODE RESPONSIVE ===== */
-body.dark-mode #logoutBtn,
-body.dark-mode #hamburgerBtn,
-body.dark-mode #themeToggleBtn {
-  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
-  color: #fff;
-}
-
-body.dark-mode #header-nav {
-  background: #1e1e1e;
-  color: #f0f0f0;
-}
-
-body.dark-mode #choice-buttons button {
-  background: linear-gradient(45deg, #ff788f, #9c9dff);
-  color: #fff;
-}
-
-body.dark-mode #search-history {
-  background: #2d3748;
-  color: #e2e8f0;
-  border: 2px solid #4a5568;
-}
-
-body.dark-mode #search-results {
-  background: #2d3748;
-}
-
-body.dark-mode .profile-section h3,
-body.dark-mode .profile-section li {
-  color: #4a88e5 !important;
-}
-
-body.dark-mode .report-container {
-  background: rgba(30, 30, 40, 0.98);
-}
-
-body.dark-mode .report-card {
-  background: #2d3748;
-  border-color: #4a5568;
-}
-
-body.dark-mode .report-card-body li {
-  background: linear-gradient(to right, #374151, #4b5563);
-  color: #e2e8f0;
+  .result-image {
+    width: 110px;
+  }
 }
