@@ -394,11 +394,6 @@ body.dark-mode #quizResultContent h3 {
     font-size: 1.15rem !important;
   }
 
-  #quizOptions button {
-    width: 98% !important;
-    font-size: 0.95rem !important;
-  }
-
   .quiz-result-card {
     margin: 1rem 0.5rem !important;
     padding: 1.5rem !important;
@@ -452,7 +447,6 @@ body.dark-mode #quizResultContent h3 {
   #quizQuestion {
     font-size: 1.05rem !important;
   }
-
 
   .result-image {
     width: 130px !important;
