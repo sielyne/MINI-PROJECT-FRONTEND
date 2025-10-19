@@ -135,125 +135,158 @@ body.dark-mode #login p {
   color: #fffffff2;
 }
 
-/* Responsive Breakpoints */
-
-/* Tablet dan Device Sedang (768px ke bawah) */
-@media (max-width: 768px) {
-  #toggleText {
-    font-size: 0.95rem;
-  }
-  
-  #choice-buttons button {
-    font-size: 16px;
-    padding: 10px 24px;
-  }
-}
-
-/* ============================
-   📱 RESPONSIVE LOGIN LAYOUT
-   ============================ */
-
-/* Tablet & Medium Devices (≤ 992px) */
 @media (max-width: 992px) {
-  body {
+  #login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     padding: 2em 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
-  #user-form {
-    width: 80%;
-    max-width: 450px;
-    padding: 2em;
-  }
-
-  #choice-buttons button {
-    padding: 14px 30px;
-    font-size: 1rem;
-  }
-
-  #toggleText {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile Landscape (≤ 768px) */
-@media (max-width: 768px) {
-  #user-form {
-    width: 90%;
-    padding: 1.8em 1.5em;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  #user-form h2 {
-    font-size: 1.3rem;
-  }
-
-  #user-form input[type="text"],
-  #user-form input[type="password"] {
-    font-size: 1rem;
-    padding: 0.8em 1em;
-  }
-
-  #choice-buttons {
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  #choice-buttons button {
+  #login .container {
     width: 100%;
-    max-width: 280px;
-    font-size: 1.05rem;
-    padding: 14px;
-    border-radius: 28px;
+    max-width: 600px;
   }
 
-  #toggleText {
-    font-size: 0.85rem;
-    margin-top: 1.2em;
+  #login h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
   }
-}
 
-/* Mobile Portrait (≤ 600px) */
-@media (max-width: 600px) {
-  body {
-    padding: 1.5em 0.8em;
+  #login h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+  }
+
+  #login p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   #user-form {
-    width: 95%;
-    padding: 1.5em 1.2em;
-    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 1.5em auto;
+    padding: 2em 1.5em;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
   }
 
   #user-form h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: #6a82fb;
+    margin-bottom: 1em;
   }
 
   #user-form input {
-    font-size: 0.95rem;
-    padding: 0.75em 1em;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8em 1em;
+    border-radius: 10px;
+  }
+
+  #user-form button {
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 280px;
+    margin: 8px 0;
+    background: linear-gradient(45deg, #a259c6, #6a82fb);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  #user-form button:hover {
+    transform: scale(1.05);
+  }
+
+  #choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5em;
   }
 
   #choice-buttons button {
-    font-size: 1rem;
-    padding: 13px 0;
-    width: 100%;
-    max-width: 270px;
+    width: 85%;
+    max-width: 300px;
+    padding: 14px 0;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #fcb7ff, #72a8ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  #choice-buttons button:hover {
+    transform: scale(1.08);
   }
 
   #toggleText {
     font-size: 0.8rem;
     line-height: 1.4;
+    margin-top: 1em;
+  }
+}
+@media (max-width: 600px) {
+  #login h1 {
+    font-size: 1.6rem;
+  }
+
+  #login h2 {
+    font-size: 1rem;
+  }
+
+  #login p {
+    font-size: 0.9rem;
+  }
+
+  #user-form {
+    width: 95%;
+    padding: 1.5em 1.2em;
+  }
+
+  #user-form h2 {
+    font-size: 1.25rem;
+  }
+
+  #user-form input {
+    font-size: 0.95rem;
+    padding: 0.7em 1em;
+  }
+
+  #user-form button {
+    font-size: 1rem;
+    padding: 13px 0;
+  }
+
+  #toggleText {
+    font-size: 0.75rem;
   }
 }
 
-/* Small Mobile (≤ 400px) */
+/* Extra Small (≤400px) */
 @media (max-width: 400px) {
+  #login h1 {
+    font-size: 1.4rem;
+  }
+
   #user-form {
     width: 92%;
     padding: 1.2em 1em;
@@ -263,26 +296,8 @@ body.dark-mode #login p {
     font-size: 1.1rem;
   }
 
-  #choice-buttons button {
-    font-size: 0.95rem;
-    padding: 12px 0;
-  }
-
-  #toggleText {
-    font-size: 0.75rem;
-  }
-}
-
-/* Extra Small (≤ 350px) */
-@media (max-width: 350px) {
-  #user-form {
-    width: 90%;
-    padding: 1em;
-  }
-
-  #choice-buttons button {
+  #user-form button {
     font-size: 0.9rem;
-    padding: 11px 0;
   }
 
   #toggleText {

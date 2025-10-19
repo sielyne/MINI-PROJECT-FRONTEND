@@ -64,3 +64,97 @@
     color: #6a82fb !important;
   }
 }
+
+@media (max-width: 900px) {
+  .feature-cards {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 45%;
+    padding: 1.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .cta {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #menu {
+    padding: 1rem;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .card button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.05rem;
+    border-radius: 10px;
+  }
+
+  .cta {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card button {
+    font-size: 1rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
