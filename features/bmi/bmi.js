@@ -11,6 +11,8 @@ FeatureHandler.registerFeature('bmi', {
       console.error('BMI form or back button not found');
       return;
     }
+    console.log('Current user before submit:', FeatureHandler.getCurrentUser());
+
     form.addEventListener('submit', (e) => this.handleSubmit(e));
     backBtn.addEventListener('click', () => FeatureHandler.showPage('menu'));
     
@@ -141,6 +143,8 @@ FeatureHandler.registerFeature('bmi', {
       da.getDate() === db.getDate()
     );
   },
+
+  
 
   handleSubmit(e) {
     e.preventDefault();

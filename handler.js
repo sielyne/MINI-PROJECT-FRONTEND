@@ -109,9 +109,10 @@ getCurrentUser() {
 
   // Remove current user (helper yang benar)
   clearCurrentUser() {
-    this.currentUser = null;
-    localStorage.removeItem('bloomii-username');
-  },
+  this.currentUser = null;
+  sessionStorage.removeItem('bloomii-username');
+},
+
 
   // Update header UI sesuai status login
   updateHeader() {
