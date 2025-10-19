@@ -135,90 +135,33 @@ body.dark-mode #login p {
   color: #fffffff2;
 }
 
-/* Responsive Breakpoints */
-
-/* Tablet dan Device Sedang (768px ke bawah) */
 @media (max-width: 768px) {
-  #toggleText {
-    font-size: 0.95rem;
-  }
-  
   #choice-buttons button {
     font-size: 16px;
-    padding: 10px 24px;
+    padding: 12px 26px;
+  }
+  #user-form input {
+    font-size: 1.05rem;
+    padding: 0.8em 1em;
   }
 }
 
-/* Mobile Landscape dan Device Kecil (600px ke bawah) */
-@media (max-width: 600px) {
-  #toggleText {
-    font-size: 0.9rem;
-    margin-top: 1.2em;
-  }
-  
-  #choice-buttons button {
-    font-size: 15px;
-    padding: 10px 20px;
-    margin: 0 6px;
-  }
-}
-
-/* Mobile Portrait (500px ke bawah) */
 @media (max-width: 500px) {
-  #user-form {
-    min-width: unset;
-    width: 90vw;
-    padding: 1.5em 1.2em;
-  }
-  
   #toggleText {
     font-size: 0.85rem;
     margin-top: 1em;
-    padding: 0 0.5em;
   }
-  
-  #choice-buttons button {
-    font-size: 14px;
-    padding: 9px 18px;
-  }
-}
-
-/* Mobile Small (400px ke bawah) */
-@media (max-width: 400px) {
-  #user-form {
-    padding: 1.2em 1em;
-  }
-  
-  #toggleText {
-    font-size: 0.8rem;
-    line-height: 1.5;
-  }
-  
   #choice-buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
-  
   #choice-buttons button {
     width: 100%;
-    max-width: 200px;
-    margin: 0;
-    font-size: 14px;
+    font-size: 18px;
+    padding: 14px 0;
   }
-}
-
-/* Mobile Extra Small (350px ke bawah) */
-@media (max-width: 350px) {
-  #toggleText {
-    font-size: 0.75rem;
-  }
-  
-  #user-form h2 {
-    font-size: 1.3rem;
-  }
-  
-  #choice-buttons button {
-    font-size: 13px;
-    padding: 8px 16px;
+  #user-form {
+    width: 90vw;
+    padding: 1.5em 1em;
   }
 }

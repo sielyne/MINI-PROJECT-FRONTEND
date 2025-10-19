@@ -64,3 +64,37 @@
     color: #6a82fb !important;
   }
 }
+
+@media (max-width: 900px) {
+  .feature-cards {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-cards {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 1rem;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  .card button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

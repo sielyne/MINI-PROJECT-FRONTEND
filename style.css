@@ -426,83 +426,114 @@ body.dark-mode .footer-copyright {
   }
 }
 
-/* ================= RESPONSIVE FIX ================= */
+/* ==== GLOBAL STYLES ==== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fc;
+  color: #333;
+}
 
-/* Tablet (≤ 768px) → 2 kolom di menu, tombol & input lebih besar */
+/* Container Umum */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Tombol Umum */
+button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #6a82fb, #fcb7ff);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #fcb7ff, #6a82fb);
+}
+
+/* Card Umum */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Input Form Umum */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid #6a82fb;
+  background: #fff;
+}
+
+/* ==== RESPONSIVE ==== */
+
+/* Tablet */
 @media (max-width: 768px) {
-  /* Menu cards */
-  .feature-cards {
-    justify-content: center;
+  h1, h2 {
+    font-size: 1.5rem;
   }
-  .card {
-    width: 45%;
-    min-width: 240px;
+  .container {
+    padding: 0.8rem;
   }
-
-  /* Tombol umum */
-  button, 
-  #choice-buttons button, 
-  .card button, 
-  .cta {
-    font-size: 1rem;
-    padding: 0.8em 1.5em;
-  }
-
-  /* Input form login/register */
-  #user-form input[type="text"],
-  #user-form input[type="password"] {
-    font-size: 1rem;
-    padding: 0.8em 1.2em;
-  }
-}
-
-@media (max-width: 500px) {
-  .feature-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%;
-    max-width: 340px;
-  }
-
-  button, 
-  #choice-buttons button, 
-  .card button, 
-  .cta {
-    font-size: 1.05rem;
-    width: 100%;
-    max-width: 300px;
-    padding: 0.9em 1.5em;
-  }
-
-  #user-form input[type="text"],
-  #user-form input[type="password"] {
-    font-size: 1.1rem;
-    padding: 0.9em 1.3em;
-  }
-
-  #toggleText {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 350px) {
-  button, 
-  #choice-buttons button, 
-  .card button, 
-  .cta {
+  button {
     font-size: 0.95rem;
-    padding: 0.75em 1.2em;
+    padding: 0.6rem 1.2rem;
   }
+}
 
-  #user-form input[type="text"],
-  #user-form input[type="password"] {
+/* Mobile */
+@media (max-width: 500px) {
+  h1, h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  button {
+    width: 100%;
     font-size: 1rem;
-    padding: 0.8em 1.1em;
+    padding: 0.9rem;
   }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 1.05rem;
+    padding: 0.9rem 1rem;
+  }
+}
 
-  #toggleText {
-    font-size: 0.75rem;
+/* Extra Small */
+@media (max-width: 350px) {
+  h1, h2 {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
 }
