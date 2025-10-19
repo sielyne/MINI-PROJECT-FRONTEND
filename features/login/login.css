@@ -136,7 +136,18 @@ body.dark-mode #login p {
 }
 
 @media (max-width: 768px) {
+  #login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
   #user-form {
+    margin: 0 auto !important;  
     width: 95% !important;
     max-width: 400px !important;
     padding: 1.5em 1.2em !important;
@@ -155,6 +166,9 @@ body.dark-mode #login p {
 }
 
 @media (max-width: 480px) {
+  #login {
+    padding: 0.8rem;
+  }
   #user-form {
     width: 98% !important;
     padding: 1.2em 1em !important;
