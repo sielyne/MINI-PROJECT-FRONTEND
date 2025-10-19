@@ -190,14 +190,14 @@ body.dark-mode #hamburgerBtn:hover {
 
 #header-nav button:hover {
   color: #6a82fb;
-
+}
 
 #app-container {
   animation: fadeIn 0.4s ease-in-out;
   margin: 0 auto;
   max-width: 1200px;
   padding: 2rem;
-  flex: 1 
+  flex: 1 !important;
 }
 
 #app-container > * {
