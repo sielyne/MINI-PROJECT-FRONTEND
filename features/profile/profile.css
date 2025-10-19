@@ -808,7 +808,6 @@
     line-height: 1.4 !important;
   }
 
-  /* Hasil search yang panjang dibuat word-wrap */
   #search-results li {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
