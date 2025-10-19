@@ -425,12 +425,6 @@ body.dark-mode #quizResultContent h3 {
     grid-template-columns: 1fr !important;
   }
 
-    .quiz-nav button {
-    padding: 0.6rem 1.2rem !important;
-    font-size: 0.9rem !important;
-    margin: 2px !important;
-  }
-
   .quiz-result-buttons {
     display: flex !important;
     flex-direction: column !important;
@@ -459,10 +453,6 @@ body.dark-mode #quizResultContent h3 {
     font-size: 1.05rem !important;
   }
 
-  #quizOptions button {
-    font-size: 0.9rem !important;
-    padding: 0.7rem 0.9rem !important;
-  }
 
   .result-image {
     width: 130px !important;
@@ -474,14 +464,6 @@ body.dark-mode #quizResultContent h3 {
 
   .result-info p {
     font-size: 0.85rem !important;
-  }
-
-  .quiz-nav button {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.85rem !important;
-    margin: 2px !important;
-    flex: 1 1 auto !important;
-    min-width: 100px !important;
   }
 
   .quiz-result-buttons {
