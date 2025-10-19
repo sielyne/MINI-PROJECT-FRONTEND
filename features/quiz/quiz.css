@@ -381,7 +381,37 @@ body.dark-mode #quizResultContent h3 {
   color: #a1c4fd !important;
 }
 
+#quizQuestion[style*="display: none"],
+#quizOptions[style*="display: none"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+.quiz-nav[style*="display: none"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+
+
 @media (max-width: 768px) {
+  #quizBox:not(.hidden) .quiz-nav:not([style*="display: none"]) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
   .quiz-nav {
     display: flex !important;
     justify-content: center !important;
@@ -392,6 +422,11 @@ body.dark-mode #quizResultContent h3 {
 
   #quizQuestion {
     font-size: 1.15rem !important;
+  }
+
+  #quizOptions button {
+    width: 98% !important;
+    font-size: 0.95rem !important;
   }
 
   .quiz-result-card {
@@ -420,6 +455,12 @@ body.dark-mode #quizResultContent h3 {
     grid-template-columns: 1fr !important;
   }
 
+    .quiz-nav button {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    margin: 2px !important;
+  }
+
   .quiz-result-buttons {
     display: flex !important;
     flex-direction: column !important;
@@ -437,7 +478,15 @@ body.dark-mode #quizResultContent h3 {
 
 }
 
+
 @media (max-width: 480px) {
+  #quizBox:not(.hidden) .quiz-nav:not([style*="display: none"]) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 10px !important;
+    justify-content: center !important;
+  }
   .quiz-nav {
     flex-wrap: wrap !important;
     gap: 8px !important;
@@ -446,6 +495,11 @@ body.dark-mode #quizResultContent h3 {
 
   #quizQuestion {
     font-size: 1.05rem !important;
+  }
+
+  #quizOptions button {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0.9rem !important;
   }
 
   .result-image {
@@ -458,6 +512,14 @@ body.dark-mode #quizResultContent h3 {
 
   .result-info p {
     font-size: 0.85rem !important;
+  }
+
+  .quiz-nav button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+    margin: 2px !important;
+    flex: 1 1 auto !important;
+    min-width: 100px !important;
   }
 
   .quiz-result-buttons {
