@@ -381,3 +381,63 @@ body.dark-mode #quizResultContent h3 {
   color: #a1c4fd !important;
 }
 
+@media (max-width: 768px) {
+  #quizQuestion {
+    font-size: 1.1rem;   /* sedikit lebih kecil tapi tetap jelas */
+    text-align: center;  /* biar rapi */
+    padding: 0 10px;     /* beri jarak kiri kanan */
+  }
+
+  #quizOptions button {
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+    width: 100%;
+  }
+
+  .quiz-result-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .quiz-result-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  #quizQuestion {
+    font-size: 1rem;  
+    line-height: 1.4;
+  }
+
+  .article-slideshow {
+    max-width: 100%;
+  }
+
+  .result-image {
+    width: 140px
+  }
+
+  #quizProgressBar {
+    max-width: 100%;
+  }
+
+  .quiz-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .quiz-nav button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  #quizQuestion {
+    font-size: 0.9rem;
+  }
+  #quizOptions button {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
