@@ -427,13 +427,11 @@ body.dark-mode .footer-copyright {
 }
 
 @media (max-width: 768px) {
-  /* Container */
   .container {
     padding: 1rem !important;
     max-width: 100% !important;
   }
 
-  /* Header */
   #main-header {
     padding: 0.6rem 1rem !important;
   }
@@ -461,7 +459,6 @@ body.dark-mode .footer-copyright {
     min-width: 140px !important;
   }
 
-  /* Typography */
   h1 {
     font-size: 1.8rem !important;
   }
@@ -477,7 +474,6 @@ body.dark-mode .footer-copyright {
 }
 
 @media (max-width: 480px) {
-  /* Global */
   body {
     font-size: 14px !important;
   }
@@ -486,7 +482,6 @@ body.dark-mode .footer-copyright {
     padding: 0.5rem !important;
   }
 
-  /* Header */
   #main-header {
     padding: 0.5rem 0.8rem !important;
   }
@@ -505,7 +500,6 @@ body.dark-mode .footer-copyright {
     min-width: 130px !important;
   }
 
-  /* Typography */
   h1 {
     font-size: 1.5rem !important;
   }
@@ -517,5 +511,6 @@ body.dark-mode .footer-copyright {
   button {
     font-size: 0.9rem !important;
     padding: 0.5em 1.2em !important;
+    margin: 2px !important;
   }
 }

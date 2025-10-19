@@ -150,6 +150,7 @@ body.dark-mode #login p {
     min-width: 120px !important;
     padding: 10px 20px !important;
     font-size: 15px !important;
+    margin: 2px;
   }
 }
 
@@ -175,6 +176,7 @@ body.dark-mode #login p {
 
   #choice-buttons {
     flex-direction: column !important;
+    margin: 2px;
   }
 
   #choice-buttons button {

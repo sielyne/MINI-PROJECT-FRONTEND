@@ -343,8 +343,16 @@ button:active {
     }
 
     .emoji-options {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        justify-items: center !important;
+        max-width: 90% !important;
         gap: 0.5rem;
         margin: 1rem 0;
+    }
+
+    .calendar-nav {
+        justify-content: center !important;
     }
 
     .emoji-options .mood-btn {
