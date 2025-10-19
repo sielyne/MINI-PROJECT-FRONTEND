@@ -347,7 +347,6 @@ button:active {
     .emoji-options {
         gap: 0.5rem;
         margin: 1rem 0;
-        justify-content: center !important;
     }
 
     .calendar-nav {
