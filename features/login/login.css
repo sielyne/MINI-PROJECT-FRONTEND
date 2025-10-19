@@ -149,76 +149,143 @@ body.dark-mode #login p {
   }
 }
 
-/* Mobile Landscape dan Device Kecil (600px ke bawah) */
-@media (max-width: 600px) {
+/* ============================
+   📱 RESPONSIVE LOGIN LAYOUT
+   ============================ */
+
+/* Tablet & Medium Devices (≤ 992px) */
+@media (max-width: 992px) {
+  body {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #user-form {
+    width: 80%;
+    max-width: 450px;
+    padding: 2em;
+  }
+
+  #choice-buttons button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+
   #toggleText {
     font-size: 0.9rem;
-    margin-top: 1.2em;
-  }
-  
-  #choice-buttons button {
-    font-size: 15px;
-    padding: 10px 20px;
-    margin: 0 6px;
   }
 }
 
-/* Mobile Portrait (500px ke bawah) */
-@media (max-width: 500px) {
+/* Mobile Landscape (≤ 768px) */
+@media (max-width: 768px) {
   #user-form {
-    min-width: unset;
-    width: 90vw;
-    padding: 1.5em 1.2em;
+    width: 90%;
+    padding: 1.8em 1.5em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
-  
-  #toggleText {
-    font-size: 0.85rem;
-    margin-top: 1em;
-    padding: 0 0.5em;
-  }
-  
-  #choice-buttons button {
-    font-size: 14px;
-    padding: 9px 18px;
-  }
-}
 
-/* Mobile Small (400px ke bawah) */
-@media (max-width: 400px) {
-  #user-form {
-    padding: 1.2em 1em;
-  }
-  
-  #toggleText {
-    font-size: 0.8rem;
-    line-height: 1.5;
-  }
-  
-  #choice-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  #choice-buttons button {
-    width: 100%;
-    max-width: 200px;
-    margin: 0;
-    font-size: 14px;
-  }
-}
-
-/* Mobile Extra Small (350px ke bawah) */
-@media (max-width: 350px) {
-  #toggleText {
-    font-size: 0.75rem;
-  }
-  
   #user-form h2 {
     font-size: 1.3rem;
   }
-  
+
+  #user-form input[type="text"],
+  #user-form input[type="password"] {
+    font-size: 1rem;
+    padding: 0.8em 1em;
+  }
+
+  #choice-buttons {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   #choice-buttons button {
-    font-size: 13px;
-    padding: 8px 16px;
+    width: 100%;
+    max-width: 280px;
+    font-size: 1.05rem;
+    padding: 14px;
+    border-radius: 28px;
+  }
+
+  #toggleText {
+    font-size: 0.85rem;
+    margin-top: 1.2em;
+  }
+}
+
+/* Mobile Portrait (≤ 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5em 0.8em;
+  }
+
+  #user-form {
+    width: 95%;
+    padding: 1.5em 1.2em;
+    border-radius: 16px;
+  }
+
+  #user-form h2 {
+    font-size: 1.2rem;
+  }
+
+  #user-form input {
+    font-size: 0.95rem;
+    padding: 0.75em 1em;
+  }
+
+  #choice-buttons button {
+    font-size: 1rem;
+    padding: 13px 0;
+    width: 100%;
+    max-width: 270px;
+  }
+
+  #toggleText {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+/* Small Mobile (≤ 400px) */
+@media (max-width: 400px) {
+  #user-form {
+    width: 92%;
+    padding: 1.2em 1em;
+  }
+
+  #user-form h2 {
+    font-size: 1.1rem;
+  }
+
+  #choice-buttons button {
+    font-size: 0.95rem;
+    padding: 12px 0;
+  }
+
+  #toggleText {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small (≤ 350px) */
+@media (max-width: 350px) {
+  #user-form {
+    width: 90%;
+    padding: 1em;
+  }
+
+  #choice-buttons button {
+    font-size: 0.9rem;
+    padding: 11px 0;
+  }
+
+  #toggleText {
+    font-size: 0.7rem;
   }
 }
