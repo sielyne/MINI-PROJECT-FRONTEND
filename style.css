@@ -426,43 +426,96 @@ body.dark-mode .footer-copyright {
   }
 }
 
-@media (max-width: 600px) {
-  #menu {
-    padding: 1rem;
+@media (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 1rem !important;
+    max-width: 100% !important;
   }
 
-  .feature-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    width: 100%;
+  /* Header */
+  #main-header {
+    padding: 0.6rem 1rem !important;
   }
 
-  .card {
-    width: 95%;
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  .logo {
+    font-size: 1.2rem !important;
   }
 
-  .card h3 {
-    font-size: 1.3rem;
+  .profile-icon {
+    width: 28px !important;
+    height: 28px !important;
   }
 
-  .card p {
-    font-size: 1rem;
+  #header-username {
+    font-size: 0.85rem !important;
   }
 
-  .card button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.8rem;
+  #logoutBtn, #hamburgerBtn, #themeToggleBtn {
+    padding: 0.4em 1em !important;
+    font-size: 1rem !important;
   }
 
-  .cta {
-    width: 95%;
-    font-size: 1.1rem;
-    padding: 1rem;
+  #header-nav {
+    right: 1rem !important;
+    min-width: 140px !important;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  button {
+    font-size: 0.95rem !important;
+    padding: 0.5em 1.5em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Global */
+  body {
+    font-size: 14px !important;
+  }
+
+  .container {
+    padding: 0.5rem !important;
+  }
+
+  /* Header */
+  #main-header {
+    padding: 0.5rem 0.8rem !important;
+  }
+
+  .logo {
+    font-size: 1.1rem !important;
+  }
+
+  .profile-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  #header-nav {
+    right: 0.5rem !important;
+    min-width: 130px !important;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  button {
+    font-size: 0.9rem !important;
+    padding: 0.5em 1.2em !important;
   }
 }

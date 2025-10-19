@@ -50,3 +50,21 @@
     color: #6a82fb !important;
   }
 }
+
+@media (max-width: 768px) {
+  .dashboard-cards {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .dashboard-cards .card {
+    width: 90% !important;
+    max-width: 400px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-cards .card {
+    width: 98% !important;
+  }
+}

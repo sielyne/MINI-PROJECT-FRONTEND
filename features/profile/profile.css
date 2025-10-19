@@ -696,3 +696,167 @@
     font-size: 0.8rem;
   }
 }
+
+/* === SEARCH HISTORY RESPONSIVE === */
+@media (max-width: 768px) {
+  .search-history-container {
+    max-width: 95% !important;
+    padding: 0 0.5rem !important;
+    margin: 1.5rem auto 0 !important;
+  }
+
+  #search-history {
+    padding: 0.8rem 1rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 10px !important;
+  }
+
+  #search-results {
+    padding: 0.8rem !important;
+    margin-top: 0.8rem !important;
+    border-radius: 10px !important;
+  }
+
+  #search-results h3 {
+    font-size: 0.95rem !important;
+    margin-top: 0.8rem !important;
+    padding-bottom: 3px !important;
+  }
+
+  #search-results ul {
+    margin: 0.4rem 0 0.8rem !important;
+    padding-left: 0.8rem !important;
+  }
+
+  #search-results li {
+    padding: 0.8rem 1rem !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.7rem !important;
+    border-radius: 8px !important;
+  }
+
+  .search-history-container h3 {
+    font-size: 0.95rem !important;
+    margin-top: 0.8rem !important;
+  }
+
+  .search-history-container ul {
+    margin: 0.3rem 0 0.8rem !important;
+    padding-left: 0.8rem !important;
+  }
+
+  .search-history-container li {
+    font-size: 0.9rem !important;
+    padding: 5px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-history-container {
+    max-width: 98% !important;
+    padding: 0 0.3rem !important;
+    margin: 1rem auto 0 !important;
+  }
+
+  #search-history {
+    padding: 0.7rem 0.9rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+  }
+
+  #search-history::placeholder {
+    font-size: 0.85rem !important;
+  }
+
+  #search-results {
+    padding: 0.7rem !important;
+    margin-top: 0.7rem !important;
+  }
+
+  #search-results h3 {
+    font-size: 0.9rem !important;
+    margin-top: 0.7rem !important;
+    padding-bottom: 3px !important;
+  }
+
+  #search-results ul {
+    margin: 0.3rem 0 0.7rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  #search-results li {
+    padding: 0.7rem 0.9rem !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.6rem !important;
+    border-radius: 7px !important;
+    line-height: 1.5 !important;
+  }
+
+  .search-history-container h3 {
+    font-size: 0.9rem !important;
+    margin-top: 0.7rem !important;
+  }
+
+  .search-history-container ul {
+    margin: 0.2rem 0 0.7rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .search-history-container li {
+    font-size: 0.85rem !important;
+    padding: 3px 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hasil search yang panjang dibuat word-wrap */
+  #search-results li {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 350px) {
+  #search-history {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  #search-results li {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .search-history-container li {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Dark Mode Search */
+body.dark-mode #search-history {
+  background: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border: 2px solid #4a5568 !important;
+}
+
+body.dark-mode #search-history::placeholder {
+  color: #a0aec0 !important;
+}
+
+body.dark-mode #search-results {
+  background: #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode #search-results h3 {
+  color: #8b9aff !important;
+}
+
+body.dark-mode #search-results li {
+  background: linear-gradient(to right, #374151, #4b5563) !important;
+  color: #e2e8f0 !important;
+  border-left-color: #8b9aff !important;
+}
+
+body.dark-mode #search-results li:hover {
+  background: linear-gradient(to right, #4b5563, #6b7280) !important;
+}
