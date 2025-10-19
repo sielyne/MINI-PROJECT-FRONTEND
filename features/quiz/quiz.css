@@ -381,30 +381,3 @@ body.dark-mode #quizResultContent h3 {
   color: #a1c4fd !important;
 }
 
-@media (max-width: 768px) {
-  .quiz-question {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .quiz-options button {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .quiz-question {
-    font-size: 20px;
-  }
-
-  .quiz-options button {
-    font-size: 16px;
-    padding: 12px 16px;
-  }
-}
